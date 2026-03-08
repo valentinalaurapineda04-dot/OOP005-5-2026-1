@@ -1,0 +1,37 @@
+import java.util.Scanner; 
+public class matriz2x2 {
+    public int[][]data;
+    public int filas;
+    public int columnas;
+
+    public matriz2x2() {
+        filas = 2;
+        columnas = 2;
+        data = new int [filas][columnas];
+    }
+    public void set (){
+        Scanner sc = new Scanner(System.in);
+
+        for (int i = 0; i<filas; i++){
+            for (int j = 0; j < columnas; j++){
+                System.out.println("data ["+ i + "][" + j + "]: ");
+                data [i][j] = sc.nextInt();
+            }
+        }
+    }
+    public void get(){
+        System.out.println("\nMatriz 2x2:");
+        for(int i = 0; i<filas; i++){
+            for (int j = 0; j<columnas; j++){
+                System.out.println(data[i][j] + " ");    
+            }
+            System.out.println();
+        }
+    }
+        public static void main (String[] args){
+            matriz2x2 m = new matriz2x2();
+            m.set();
+            m.get();
+    
+    }
+}
